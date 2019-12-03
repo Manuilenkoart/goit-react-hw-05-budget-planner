@@ -6,9 +6,7 @@ const mapStateToProps = state => {
   return {
     budget: budgetSelectors.getBudget(state),
     expenses: budgetSelectors.getTotalExpenses(state),
-    balance:
-      budgetSelectors.getBudget(state) -
-      budgetSelectors.getTotalExpenses(state),
+    balance: budgetSelectors.currentBalance(state),
   };
 };
 
